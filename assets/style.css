@@ -1,0 +1,83 @@
+
+:root{
+  --bg:#ffffff; --fg:#111; --muted:#666;
+  --link:#0645ad; --border:#eee; --max:900px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);
+  font:16px/1.7 system-ui,-apple-system,Segoe UI,Roboto,'Noto Sans TC',sans-serif}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 16px}
+.site-header{position:sticky;top:0;background:#fafafa;border-bottom:1px solid var(--border);z-index:10}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+.brand{font-weight:700;text-decoration:none;color:var(--fg)}
+.nav a{margin-left:14px;text-decoration:none;color:var(--link)}
+.nav a:hover{text-decoration:underline}
+h1{margin:0 0 6px;font-size:32px}
+h2{margin:28px 0 10px;font-size:22px;border-bottom:1px solid var(--border);padding-bottom:6px}
+h3{margin:16px 0 6px;font-size:18px}
+p{margin:0 0 12px}
+ul{padding-left:20px}
+.small{font-size:0.9rem}
+.muted{color:var(--muted)}
+.hero{display:grid;grid-template-columns:1fr 160px;gap:16px;align-items:start;padding:24px 0}
+.hero-photo{width:180px;height:240px;object-fit:cover;border:1px solid var(--border);border-radius:6px;background:#fff}
+.subtitle{color:var(--muted);margin-top:-4px}
+.links a{color:var(--link);text-decoration:none}
+.links a:hover{text-decoration:underline}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:700px){
+  .hero{grid-template-columns:1fr}
+  .two-col{grid-template-columns:1fr}
+}
+.site-footer{border-top:1px solid var(--border);margin-top:24px}
+.site-footer .wrap{padding:18px 0;color:var(--muted)}
+.pubs li{margin-bottom:6px}
+
+.social-icons {
+  margin-top: 8px;
+}
+
+.social-icons a {
+  margin-right: 12px;
+  font-size: 1.6em;  /* 圖示大小 */
+  color: #0645ad;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.social-icons a:hover {
+  color: #0a58ca; /* 滑過去變深藍 */
+}
+
+.contact-lines {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;  /* 垂直排列兩行 */
+  gap: 4px;                /* 每行之間留間距 */
+  font-size: 0.95em;
+  color: #333;
+}
+
+.contact-item {
+  display: flex;           /* icon 與文字橫向排列 */
+  align-items: center;     /* 垂直置中對齊 */
+}
+
+.contact-item i {
+  color: #0645ad;
+  margin-right: 8px;       /* icon 與文字間距 */
+  width: 18px;             /* 固定寬度讓文字對齊 */
+  text-align: center;      /* icon 置中 */
+}
+
+#about p {
+  text-align: justify;   /* 讓文字左右對齊 */
+  text-justify: inter-word;  /* 優化英文間距（可選） */
+  line-height: 1.5;      /* 增加行距讓可讀性更高 */
+}
+
+#research ul {
+  text-align: justify;   /* 讓文字左右對齊 */
+  text-justify: inter-word;  /* 優化英文間距（可選） */
+  line-height: 1.5;      /* 增加行距讓可讀性更高 */
+}
